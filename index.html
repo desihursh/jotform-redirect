@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const eventName = encodeURIComponent(params.get("eventName"));
+      const eventDate = encodeURIComponent(params.get("eventDate"));
+      const mode = encodeURIComponent(params.get("mode"));
+
+      const redirectURL = `https://form.jotform.com/251501708797059?eventName=${eventName}&eventDate=${eventDate}&mode=${mode}`;
+
+      window.location.replace(redirectURL);
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to form...</p>
+  </body>
+</html>
