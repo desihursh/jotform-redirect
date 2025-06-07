@@ -7,9 +7,10 @@
       const params = new URLSearchParams(window.location.search);
       const eventName = encodeURIComponent(params.get("eventName"));
       const mode = encodeURIComponent(params.get("mode"));
-
-      const redirectURL = `https://form.jotform.com/251501708797059?eventName=${eventName}&mode=${mode}`;
-
+      const checkedIn = encodeURIComponent(params.get("checkedIn") || "true");
+      
+      const redirectURL = `https://form.jotform.com/251501708797059?eventName=${eventName}&mode=${mode}&checkedIn=${checkedIn}`;
+      
       window.location.replace(redirectURL);
     </script>
   </head>
